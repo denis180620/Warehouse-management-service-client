@@ -12,7 +12,6 @@ import CreateComposition from "../checkcomponent/CreateComposition";
 import DeleteComposition from "../checkcomponent/DeleteComposition";
 import GetFreeComposition from "../checkcomponent/CheckFreeComposition";
 import AddWires from "../checkcomponent/AddToWires";
-import TourniquestList from "../checkcomponent/TourniquestList";
 import HistoryOperations from "../checkcomponent/HistoryOperations";
 
 function MainApp() {
@@ -60,8 +59,6 @@ function MainApp() {
                 return <GetFreeComposition />;
             case "wires":
                 return <AddWires />;
-            case "TourniquestList":
-                return <TourniquestList />;
             case "History":
                 return <HistoryOperations />;
             default:
@@ -155,7 +152,7 @@ function MainApp() {
                             {openGroups.history && (
                                 <ul className="menu-list">
                                     <li className="menu-item">
-                                        <button className="menu-link" onClick={() => handleMenuClick("TourniquestList")}>Получение списка жгутов</button>
+                                        <button className="menu-link" onClick={() => handleMenuClick("")}>Получение списка жгутов(Раздел в разработке)</button>
                                     </li>
                                     <li className="menu-item">
                                         <button className="menu-link" onClick={() => handleMenuClick("History")}>История</button>
